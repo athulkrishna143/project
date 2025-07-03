@@ -90,17 +90,19 @@ body {
 }
 
 .join {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+  background-color:transparent;
+  color: var(--primary-color);
 }
 
 .cta-button:hover {
-  color: blueviolet;
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 
 .get {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+    background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .learn {
@@ -113,10 +115,29 @@ body {
   background-color: transparent;
   color: var(--primary-color);
 }
+.learnmore:hover{
+background-color: var(--primary-color);
+color: var(--white-color);
+}
+.learn-more {
+  background-color: transparent;
+   padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+border-radius: 37px;
+color: var(--primary-color);
+}
+/* ////////////////// */
+.learn-more:hover{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
 
 /* Hero Section */
 .card-container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0;
   display: flex;
@@ -174,7 +195,7 @@ body {
 }
 
 .practice-text {
-  text-align: center;
+  text-align: left;
 }
 
 .practice-cards {
@@ -240,6 +261,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 30px;
+height: 715px;
+
 }
 
 .doctor-image img {
@@ -250,11 +273,13 @@ body {
 
 /* Video Section */
 .video-section {
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
   gap: 30px;
   width: 1050px;
   margin: 0 auto;
+
 }
 
 .video-text {
@@ -295,20 +320,21 @@ body {
 
 /* Experts Section */
 .experts-section {
-  text-align: center;
+  text-align:left;
+
 }
 
 .expert-cards {
   display: flex;
   gap: 30px;
-  justify-content: center;
+  justify-content:center;
   flex-wrap: wrap;
 }
 
 .expert-card {
   position: relative;
   width: 242px;
-  text-align: center;
+  text-align: left;
 }
 
 .images img {
@@ -372,6 +398,8 @@ body {
 
 .pricing-text {
   margin-bottom: 80px;
+  text-align: left;
+  gap: 20px;
 }
 
 .pricing-cards {
@@ -476,31 +504,18 @@ body {
 }
 
 .popular .badge {
+  align-content: center;
   position: absolute;
   top: 10px;
   right: 10px;
   background: orange;
   color: var(--white-color);
-  /* padding: 5px 10px; */
-  /* border-radius: 50%; */
-
+  border-radius: 60%;
   width: 89px;
 height: 90px;
 top: -35px;
 left: 261px;
 gap: 10px;
-padding-top: 29px;
-padding-right: 16px;
-padding-bottom: 29px;
-padding-left: 16px;
-border-radius: 52px;
-
-}
-.card-box:hover {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  transform: translateY(-10px);
-  box-shadow: 0px 20px 30px rgba(0,0,0,0.2);
 }
 
 .pricing-card:hover ,
@@ -528,18 +543,21 @@ border-radius: 52px;
   color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .section-title {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .section-description {
   color: var(--light-color);
   font-size: 16px;
   margin-bottom: 50px;
+  text-align: left;
 }
 
 .testimonials-container {
@@ -641,7 +659,7 @@ border-radius: 52px;
 
 /* Footer Section */
 .footer {
-  background-color: var(--footer-bg);
+  /* background-color: var(--footer-bg); */
   color: var(--light-color);
   padding: 50px 20px;
 }
@@ -698,35 +716,3 @@ border-radius: 52px;
   gap: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-bar {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .hero-section,
-  .doctor-highlight,
-  .video-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .practice-cards,
-  .expert-cards,
-  .pricing-cards,
-  .testimonials-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-columns {
-    flex-direction: column;
-    text-align: center;
-  }
-}
