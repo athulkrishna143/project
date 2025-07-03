@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #f6f7fb;
 }
 
@@ -32,6 +32,7 @@ body {
 
 /* Header Styling */
 .header {
+  gap: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,7 +91,7 @@ body {
 }
 
 .join {
-  background-color:transparent;
+  background-color: transparent;
   color: var(--primary-color);
 }
 
@@ -100,12 +101,17 @@ body {
 }
 
 .get {
-    background-color: transparent;
+  width: 193px;
+  height: 52px;
+
+  background-color: transparent;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
 }
 
 .learn {
+  width: 193px;
+  height: 52px;
   background-color: transparent;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
@@ -115,22 +121,22 @@ body {
   background-color: transparent;
   color: var(--primary-color);
 }
-.learnmore:hover{
-background-color: var(--primary-color);
-color: var(--white-color);
+.learnmore:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 .learn-more {
   background-color: transparent;
-   padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   font-weight: 600;
   font-size: 1rem;
   border: 1px solid var(--primary-color);
   cursor: pointer;
-border-radius: 37px;
-color: var(--primary-color);
+  border-radius: 37px;
+  color: var(--primary-color);
 }
 /* ////////////////// */
-.learn-more:hover{
+.learn-more:hover {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
@@ -151,6 +157,10 @@ color: var(--primary-color);
   align-items: center;
   gap: 30px;
   height: 682px;
+}
+.hero-section h1,
+.hero-section .para {
+  margin-bottom: 20px;
 }
 
 .hero-text {
@@ -193,6 +203,10 @@ color: var(--primary-color);
   flex-direction: column;
   gap: 1.5rem;
 }
+.practice-section h2,
+.practice-section .para {
+  margin-bottom: 20px;
+}
 
 .practice-text {
   text-align: left;
@@ -201,7 +215,11 @@ color: var(--primary-color);
 .practice-cards {
   display: flex;
   gap: 30px;
-  justify-content: center;
+  justify-content: left;
+}
+.practice-cards h2,
+.practice-cards .para {
+  margin-bottom: 20px;
 }
 
 .card-box {
@@ -210,7 +228,7 @@ color: var(--primary-color);
   height: 308px;
   padding: 10px;
   box-shadow: 0px 13px 19px 0px #00000012;
-  text-align: center;
+  text-align: left;
   transition: all 0.4s ease;
 }
 
@@ -223,7 +241,9 @@ color: var(--primary-color);
   background: #e63946;
   width: 50px;
   height: 3px;
-  margin: 10px auto;
+  margin: 10px;
+  margin-left: 0;
+  margin-bottom: 10px;
 }
 
 .card-box p {
@@ -238,7 +258,7 @@ color: var(--primary-color);
   background-color: var(--primary-color);
   color: var(--white-color);
   transform: translateY(-10px);
-  box-shadow: 0px 20px 30px rgba(0,0,0,0.2);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card-box:hover h3,
@@ -261,8 +281,11 @@ color: var(--primary-color);
   align-items: center;
   justify-content: center;
   gap: 30px;
-height: 715px;
-
+  height: 715px;
+}
+.doctor-highlight h2,
+.doctor-highlight .para {
+  margin-bottom: 20px;
 }
 
 .doctor-image img {
@@ -279,11 +302,14 @@ height: 715px;
   gap: 30px;
   width: 1050px;
   margin: 0 auto;
-
 }
 
 .video-text {
   max-width: 507px;
+}
+.video-section h2,
+.video-section .para {
+  margin-bottom: 20px;
 }
 
 .video-card {
@@ -320,14 +346,22 @@ height: 715px;
 
 /* Experts Section */
 .experts-section {
-  text-align:left;
+  text-align: left;
+}
+.experts-section h2,
+.experts-section .para {
+  margin-bottom: 20px;
+}
 
+.expert-card h2,
+.expert-card .para {
+  margin-bottom: 20px;
 }
 
 .expert-cards {
   display: flex;
   gap: 30px;
-  justify-content:center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -366,19 +400,20 @@ height: 715px;
   background-color: var(--second-color);
   color: var(--white-color);
   border: none;
-  border-radius: 20px;
+  border-radius: 94px;
+  margin-bottom: 20px;
 }
 
 .frame-sec {
   display: flex;
   gap: 20px;
-  margin: 10px 0;
+  margin: 15px;
 }
 
 .price {
   display: flex;
   gap: 5px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 /* Pricing Section */
@@ -397,9 +432,13 @@ height: 715px;
 }
 
 .pricing-text {
+  justify-content: space-between;
   margin-bottom: 80px;
   text-align: left;
   gap: 20px;
+}
+.pricing-text h2 {
+  margin-bottom: 20px;
 }
 
 .pricing-cards {
@@ -428,7 +467,7 @@ height: 715px;
   margin-bottom: 45px;
   padding-left: 92px;
 } */
-i.fa-solid.fa-heart::before{
+i.fa-solid.fa-heart::before {
   width: 92px;
   height: 92px;
   font-size: 92px;
@@ -447,13 +486,13 @@ i.fa-solid.fa-heart::before{
   font-size: 14px;
   margin-bottom: 35px;
 }
-.pricing-cards .subtitle :hover{
-    background-color: var(--second-color);
-    color: var(--white-color);
+.pricing-cards .subtitle :hover {
+  background-color: var(--second-color);
+  color: var(--white-color);
 }
 
 .pricing-card .price {
-    justify-content: center;
+  justify-content: center;
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 35px;
@@ -511,7 +550,6 @@ i.fa-solid.fa-heart::before{
   /* color:var(--white-color) */
 }
 
-
 .popular {
   position: relative;
 }
@@ -521,33 +559,33 @@ i.fa-solid.fa-heart::before{
   position: absolute;
   top: 10px;
   right: 10px;
-  background: orange;
+  background: #e77c40;
   color: var(--white-color);
   border-radius: 60%;
   width: 89px;
-height: 90px;
-top: -35px;
-left: 261px;
-gap: 10px;
+  height: 90px;
+  top: -35px;
+  left: 261px;
+  gap: 10px;
+  font-weight: 1000;
 }
 
-  .pricing-card:hover .icon i.fa-solid_fa-heart{
+.pricing-card:hover .icon i.fa-solid_fa-heart {
   background-color: var(--primary-color);
 }
 .pricing-card:hover .btn {
-      background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 .pricing-card:hover h3 {
-    color: var(--white-color);
-}
-
-.pricing-card:hover .features li{
   color: var(--white-color);
 }
 
+.pricing-card:hover .features li {
+  color: var(--white-color);
+}
 
 .pricing-card:hover .subtitle,
-.pricing-card:hover .desc{
+.pricing-card:hover .desc {
   color: var(--white-color);
 }
 
@@ -562,7 +600,7 @@ gap: 10px;
 .section-subtitle {
   color: var(--primary-color);
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: left;
 }
 
@@ -689,7 +727,7 @@ gap: 10px;
   gap: 30px;
   justify-content: center;
   max-width: 1041px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .column h4 {
@@ -707,6 +745,10 @@ gap: 10px;
   font-size: 1rem;
 }
 
+.nav-list-footer li {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
 .nav-list-footer a:hover {
   color: var(--primary-color);
 }
@@ -715,7 +757,7 @@ gap: 10px;
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
 }
 
 .copyrights-bg {
@@ -736,3 +778,63 @@ gap: 10px;
   gap: 20px;
 }
 
+h2 {
+  /* font-family: Montserrat; */
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0.2px;
+  color: var(--second-color);
+  margin-bottom: 20px;
+}
+h3 {
+  margin-bottom: 20px;
+}
+
+
+
+
+@media (min-width: 1025px) {
+  .hero-section,
+  .doctor-highlight,
+  .video-section {
+    gap: 30px;
+  }
+
+  .practice-cards,
+  .expert-cards,
+  .pricing-cards {
+    justify-content: center;
+  }
+
+  .video-section {
+    width: 1050px;
+  }
+
+  .pricing-section {
+    width: 1050px;
+  }
+}
+
+
+/* @media (min-width: 1025px) {
+  .hero-section,
+  .doctor-highlight,
+  .video-section {
+    gap: 30px;
+  }
+
+  .practice-cards,
+  .expert-cards,
+  .pricing-cards {
+    justify-content: center;
+  }
+
+  .video-section {
+    width: 1050px;
+  }
+
+  .pricing-section {
+    width: 1050px;
+  }
+} */
