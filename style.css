@@ -418,15 +418,28 @@ height: 715px;
   text-align: center;
 }
 
-.pricing-card .icon {
+/* .pricing-card .icon  */
+
+/* .icon{
+  width: 92px;
+  height: 92px;
+  align-content: center;
+  font-size: 92px;
+  margin-bottom: 45px;
+  padding-left: 92px;
+} */
+i.fa-solid.fa-heart::before{
+  width: 92px;
+  height: 92px;
   font-size: 92px;
   color: var(--primary-color);
-  margin-bottom: 45px;
 }
 
 .pricing-card h3 {
+  color: var(--second-color);
   font-size: 24px;
   margin-bottom: 35px;
+  margin-top: 35px;
 }
 
 .pricing-card .subtitle {
@@ -495,7 +508,7 @@ height: 715px;
 .pricing-cards :hover {
   transform: translateY(-10px);
   background-color: var(--second-color);
-  color:var(--white-color)
+  /* color:var(--white-color) */
 }
 
 
@@ -518,16 +531,23 @@ left: 261px;
 gap: 10px;
 }
 
-.pricing-card:hover ,
-.practice-card:hover p,
-.pricing-card:hover .features li {
+  .pricing-card:hover .icon i.fa-solid_fa-heart{
+  background-color: var(--primary-color);
+}
+.pricing-card:hover .btn {
+      background-color: var(--primary-color);
+}
+.pricing-card:hover h3 {
+    color: var(--white-color);
+}
+
+.pricing-card:hover .features li{
   color: var(--white-color);
 }
 
 
 .pricing-card:hover .subtitle,
-.pricing-card:hover .desc {
-
+.pricing-card:hover .desc{
   color: var(--white-color);
 }
 
