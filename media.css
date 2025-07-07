@@ -1,4 +1,4 @@
-@media screen and (min-width: 920px) {
+/* @media screen and (min-width: 920px) {
     .nav-bar {
              
     }
@@ -20,5 +20,145 @@
 
   .pricing-section {
     width: 920px;
+  }
+} */
+/* 
+@media screen and (min-width: 1025px) {
+  .hero-section,
+  .doctor-highlight,
+  .video-section {
+    gap: 30px;
+  }
+
+  .practice-cards,
+  .expert-cards,
+  .pricing-cards {
+    justify-content: center;
+  }
+
+  .video-section {
+    width: 1050px;
+  }
+
+  .pricing-section {
+    width: 1050px;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 0;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .practice-cards,
+  .expert-cards,
+  .pricing-cards,
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-box,
+  .expert-card,
+  .pricing-card,
+  .testimonial-card {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .doctor-highlight,
+  .video-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .doctor-image img,
+  .video-card {
+    max-width: 100%;
+  }
+
+  .video-section {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .pricing-section {
+    width: 100%;
+    padding: 80px 0;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-list-footer li {
+    margin-left: 0;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-section,
+  .doctor-highlight,
+  .video-section {
+    gap: 30px;
+  }
+
+  .practice-cards,
+  .expert-cards,
+  .pricing-cards {
+    justify-content: center;
+  }
+
+  .video-section {
+    width: 1050px;
+  }
+
+  .pricing-section {
+    width: 1050px;
   }
 }
