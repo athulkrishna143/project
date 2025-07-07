@@ -1,0 +1,24 @@
+@media screen and (min-width: 920px) {
+    .nav-bar {
+             
+    }
+     .hero-section,
+  .doctor-highlight,
+  .video-section {
+    gap: 30px;
+  }
+
+  .practice-cards,
+  .expert-cards,
+  .pricing-cards {
+    justify-content: center;
+  }
+
+  .video-section {
+    width: 920px;
+  }
+
+  .pricing-section {
+    width: 920px;
+  }
+}
