@@ -20,6 +20,7 @@ body {
 
 /* Container Styling */
 .container {
+  max-width: 100%;   /* */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -143,6 +144,7 @@ body {
 
 /* Hero Section */
 .card-container {
+  max-width: 100%; /**/
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
