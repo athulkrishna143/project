@@ -1,164 +1,486 @@
-/* @media screen and (min-width: 920px) {
-    .nav-bar {
-             
-    }
-     .hero-section,
-  .doctor-highlight,
-  .video-section {
-    gap: 30px;
-  }
+:root {
+  --primary-color: #8d5cf6;
+  --second-color: #252b42;
+  --light-color: #737373;
+  --white-color: #ffffff;
+  --footer-bg: #fff2f3;
+}
 
-  .practice-cards,
-  .expert-cards,
-  .pricing-cards {
-    justify-content: center;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .video-section {
-    width: 920px;
-  }
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f6f7fb;
+}
 
-  .pricing-section {
-    width: 920px;
-  }
-} */
-/* 
-@media screen and (min-width: 1025px) {
-  .hero-section,
-  .doctor-highlight,
-  .video-section {
-    gap: 30px;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  .practice-cards,
-  .expert-cards,
-  .pricing-cards {
-    justify-content: center;
-  }
+.section-bg {
+  background-color: #f6f7fb;
+}
 
-  .video-section {
-    width: 1050px;
-  }
+/* ============= HEADER ============= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+  padding: 30px 0;
+}
 
-  .pricing-section {
-    width: 1050px;
-  }
-} */
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--second-color);
+}
 
-@media screen and (min-width: 920px) {
-  .header {
-    flex-direction: column;
-    gap: 20px;
-    padding: 15px 0;
-  }
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 300px;
+}
 
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-list a {
+  color: var(--light-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-list a:hover {
+  color: var(--primary-color);
+}
+
+.nav-auth {
+  display: flex;
+  gap: 20px;
+}
+
+.cta-button {
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.login {
+  background: none;
+  color: var(--primary-color);
+}
+
+.join, .get, .learn {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.cta-button:hover, .learnmore:hover, .learn-more:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* ============= HERO ============= */
+.card-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 682px;
+}
+
+.hero-text {
+  max-width: 704px;
+}
+
+.para {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--second-color);
+  margin-bottom: 1rem;
+}
+
+.quotes {
+  font-size: 1rem;
+  color: var(--light-color);
+  margin-bottom: 2rem;
+}
+
+.btn-auth {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 704px;
+}
+
+/* ============= PRACTICE CARDS ============= */
+.practice-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.practice-text {
+  text-align: left;
+}
+
+.practice-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: left;
+}
+
+.card-box {
+  width: 240px;
+  height: 308px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 13px 19px 0px #00000012;
+  text-align: left;
+  transition: all 0.4s ease;
+}
+
+.card-box img {
+  transition: transform 0.4s ease;
+}
+
+.card-box h3 {
+  color: var(--second-color);
+  margin: 10px 0;
+}
+
+.line.red {
+  background: #e63946;
+  width: 50px;
+  height: 3px;
+  margin: 10px 0 10px 0;
+}
+
+.card-box p {
+  color: var(--light-color);
+}
+
+.card-box:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-box:hover h3, .card-box:hover p, .card-box:hover .line.red {
+  color: var(--white-color);
+}
+
+.card-box:hover img {
+  transform: scale(1.1);
+}
+
+.card-box:hover .line.red {
+  background: var(--white-color);
+}
+
+/* ============= DOCTOR, VIDEO, EXPERTS, PRICING ============= */
+.doctor-highlight, .video-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.doctor-image img, .video-card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.video-section {
+  width: 1050px;
+  margin: 0 auto;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92.6px;
+  height: 92.6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn {
+  background: transparent;
+  border: none;
+  font-size: 25px;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/* ============= EXPERT CARDS ============= */
+.expert-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.expert-card {
+  width: 242px;
+  position: relative;
+  text-align: left;
+}
+
+/* ============= PRICING CARDS ============= */
+.card-container-pricing {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-section {
+  width: 1050px;
+  padding: 160px 0;
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.pricing-card {
+  width: 328px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 13px 19px 0px #00000012;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  background: var(--second-color);
+}
+
+.pricing-card:hover h3, .pricing-card:hover .features li,
+.pricing-card:hover .subtitle, .pricing-card:hover .desc {
+  color: var(--white-color);
+}
+
+/* ============= TESTIMONIALS ============= */
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* ============= NEWSLETTER ============= */
+.newsletter-section {
+  background: var(--footer-bg);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+}
+
+.newsletter-form button {
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+/* ============= FOOTER ============= */
+.footer-columns {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1041px;
+}
+
+/* ============= RESPONSIVE ============= */
+@media (max-width: 1024px) {
   .nav-bar {
-    flex-direction: column;
-    gap: 15px;
+    gap: 100px;
   }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero-section {
+  .hero-section, .doctor-highlight, .video-section {
     flex-direction: column;
     height: auto;
     text-align: center;
-    padding: 20px 0;
   }
-
-  .hero-text {
+  .hero-text, .video-text {
     max-width: 100%;
   }
-
-  .hero-text h1 {
-    font-size: 1.8rem;
+  .hero-image img, .doctor-image img, .video-card {
+    max-width: 90%;
   }
+}
 
-  .hero-image img {
-    max-width: 100%;
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: row;
+    gap: 20px;
   }
-
-  .practice-cards,
-  .expert-cards,
-  .pricing-cards,
-  .testimonials-container {
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .practice-cards, .expert-cards, .pricing-cards, .testimonials-container {
     flex-direction: column;
     align-items: center;
   }
-
-  .card-box,
-  .expert-card,
-  .pricing-card,
-  .testimonial-card {
-    width: 100%;
-    max-width: 300px;
+  .card-box, .expert-card, .pricing-card, .testimonial-card {
+    width: 90%;
+    max-width: 320px;
     margin-bottom: 20px;
   }
-
-  .doctor-highlight,
-  .video-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .doctor-image img,
-  .video-card {
-    max-width: 100%;
-  }
-
-  .video-section {
-    width: 100%;
-    padding: 20px 0;
-  }
-
-  .pricing-section {
-    width: 100%;
-    padding: 80px 0;
-  }
-
   .footer-columns {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
+}
 
-  .nav-list-footer li {
-    margin-left: 0;
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.8rem;
   }
-
-  .newsletter-form {
+  h3 {
+    font-size: 1.2rem;
+  }
+  .newsletter-form, .btn-auth {
     flex-direction: column;
-    max-width: 100%;
+    width: 100%;
   }
-
-  .newsletter-form input,
-  .newsletter-form button {
+  .newsletter-form input, .newsletter-form button, 
+  .btn-auth button {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 5px;
   }
 }
 
-@media screen and (min-width: 1050px) {
-  .hero-section,
-  .doctor-highlight,
-  .video-section {
-    gap: 30px;
-  }
 
-  .practice-cards,
-  .expert-cards,
-  .pricing-cards {
-    justify-content: center;
-  }
 
-  .video-section {
-    width: 1050px;
-  }
+/* ------------ Responsive Media Queries ------------ */
 
-  .pricing-section {
-    width: 1050px;
+/* @media (max-width: 1024px) {
+  .nav-bar {
+    gap: 100px;
+  }
+  .hero-section, .doctor-highlight, .video-section {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+  .hero-text, .video-text {
+    max-width: 100%;
+  }
+  .hero-image img, .doctor-image img, .video-card {
+    max-width: 90%;
   }
 }
+
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .practice-cards, .expert-cards, .pricing-cards, .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-box, .expert-card, .pricing-card, .testimonial-card {
+    width: 90%;
+    max-width: 320px;
+    margin-bottom: 20px;
+  }
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+  .newsletter-form input, .newsletter-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .btn-auth {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+} */

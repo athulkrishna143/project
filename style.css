@@ -455,7 +455,7 @@ body {
   background: #fff;
   border-radius: 15px;
   box-shadow: 0px 13px 19px 0px #00000012;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   text-align: center;
 }
 
@@ -819,25 +819,71 @@ h3 {
   }
 }
 
-
-/* @media (min-width: 1025px) {
-  .hero-section,
-  .doctor-highlight,
-  .video-section {
-    gap: 30px;
+/* ============= RESPONSIVE ============= */
+@media (max-width: 1024px) {
+  .nav-bar {
+    gap: 100px;
   }
-
-  .practice-cards,
-  .expert-cards,
-  .pricing-cards {
-    justify-content: center;
+  .hero-section, .doctor-highlight, .video-section {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
   }
-
-  .video-section {
-    width: 1050px;
+  .hero-text, .video-text {
+    max-width: 100%;
   }
-
-  .pricing-section {
-    width: 1050px;
+  .hero-image img, .doctor-image img, .video-card {
+    max-width: 90%;
   }
-} */
+}
+
+@media (max-width: 768px) {
+  .header{
+    flex-direction: row;
+  }
+  .nav-bar {
+
+    flex-direction:column;
+    gap: 20px;
+    /* background-color: #2dc071; */
+  }
+  .nav-list {
+    flex-direction:row;
+    gap: 10px;
+    align-items: center;
+  }
+  .practice-cards, .expert-cards, .pricing-cards, .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-box, .expert-card, .pricing-card, .testimonial-card {
+    width: 90%;
+    max-width: 320px;
+    margin-bottom: 20px;
+  }
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .newsletter-form, .btn-auth {
+    flex-direction: column;
+    width: 100%;
+  }
+  .newsletter-form input, .newsletter-form button, 
+  .btn-auth button {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+}
+
